@@ -32,7 +32,12 @@ l_keys = [
     ['sw2', 'sx', 'sxw2'],
     ['aqz', 'aq1`', 'azq1`']
 ]
-
+def isint(s):
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
 
 def blindp(string):
     if len(string) <= 1:
@@ -63,8 +68,12 @@ def blindp(string):
 
 
 while True:
-    print("fingers traning - 1, свое задание -2,  exit - 0 ")
+    print("распальцовка - 1, свое задание -2,  exit - 0 ")
     way = input('>>')
+    if not isint(way):
+        print('ошибка ввода!')
+        continue
+
     if way == '0':
         break
     elif way == '2':
@@ -81,7 +90,9 @@ while True:
         print("4 - мизинец")
 
         l = input('>>')
-
+        if not isint(l):
+            print('ошибка ввода!')
+            continue
 
         print("введите задание для правой руки ")
         print("например 34, 0 - рука оттдыхает")
@@ -91,7 +102,9 @@ while True:
         print("4 - мизинец")
 
         r = input('>>')
-
+        if not isint(r):
+            print('ошибка ввода!')
+            continue
         for n in range(0,3):
             str_ = ''
             for lfing in l:
