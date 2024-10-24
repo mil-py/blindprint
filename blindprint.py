@@ -19,15 +19,15 @@ rtask = [
 ]
 
 r_keys = [
-    [''],
-    ['jy6', 'jy67u', 'jnmh', 'jmnhuy67'],
+    ['','',''],
+    ['jyu67', 'jnmh', 'jmnhuy67'],
     ['ki8', 'k,', 'k8i,'],
-    ['lo9', 'l.o9'],
+    ['lo9',  'l.o','l.o9'],
     [";'/", "p[]\\", ";0-="]
 ]
 l_keys = [
-    [''],
-    ['fgrt', 'fgrt45', 'fgbv', 'fgrt45vb'],
+    ['','',''],
+    ['frt45', 'fgvb', 'fgrt45vb'],
     ['de3', 'dc', 'dce3'],
     ['sw2', 'sx', 'sxw2'],
     ['aqz', 'aq1`', 'azq1`']
@@ -68,13 +68,13 @@ while True:
     if way == '0':
         break
     elif way == '2':
-        string = input("введите задание >>")  # ввод своего задания
-        for i in range(1, 5):
+        string = input("введите свой набор символов >>")  # ввод своего задания
+        for i in range(1, 3):
             blindp(string)
     else:
 
         print("введите задание для левой руки ")
-        print("например 11223, 0 - рука оттдыхает")
+        print("например 123, 0 - рука оттдыхает")
         print("1 - указательный")
         print("2 - средний")
         print("3 - безымянный")
@@ -84,7 +84,7 @@ while True:
 
 
         print("введите задание для правой руки ")
-        print("например 13, 0 - рука оттдыхает")
+        print("например 34, 0 - рука оттдыхает")
         print("1 - указательный")
         print("2 - средний")
         print("3 - безымянный")
@@ -92,18 +92,33 @@ while True:
 
         r = input('>>')
 
+        for n in range(0,3):
+            str_ = ''
+            for lfing in l:
+                str_+=l_keys[int(lfing)][n]
+            for rfing in r:
+                str_+=r_keys[int(rfing)][n]
+            blindp( str_)
 
-        for sym in l:
-            for str_ in l_keys[int(sym)]:
-                blindp(str_)
-                blindp(str_)
-                blindp(str_)
-
-        for sym in r:
-            for str_ in r_keys[int(sym)]:
-                blindp(str_)
-                blindp(str_)
-                blindp(str_)
-
+        # if len(r)==1 :
+        #     for str_ in r_keys[int(r)]:
+        #         blindp(str_)
+        #         blindp(str_)
+        #         blindp(str_)
+        #
+        # else:
+        #
+        #     for sym in l:
+        #         for str_ in l_keys[int(sym)]:
+        #             blindp(str_)
+        #             blindp(str_)
+        #             blindp(str_)
+        #
+        #     for sym in r:
+        #         for str_ in r_keys[int(sym)]:
+        #             blindp(str_)
+        #             blindp(str_)
+        #             blindp(str_)
+        #
 
 
