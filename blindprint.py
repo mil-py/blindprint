@@ -99,6 +99,7 @@ while True:
             for rfing in r:
                 str_+=r_keys[int(rfing)][n]
             blindp( str_)
+            blindp(str_)
 
         # if len(r)==1 :
         #     for str_ in r_keys[int(r)]:
