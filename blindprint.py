@@ -30,7 +30,7 @@ l_keys = [
     ['frt45', 'fgvb', 'fgrt45vb'],
     ['de3', 'dc', 'dce3'],
     ['sw2', 'sx', 'sxw2'],
-    ['aqz', 'aq1`', 'azq1`']
+    ['aqz', 'aq1', 'azq1`']
 ]
 def isint(s):
     try:
@@ -43,7 +43,7 @@ def blindp(string):
     if len(string) <= 1:
         return
     newstr = ''
-    for i in range(0, 15):
+    for i in range(0, 25):
         newstr = newstr + string[random.randint(0, len(string) - 1)]
     # vstavim probely krome nachala i konza
 
