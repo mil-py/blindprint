@@ -1,2 +1,4 @@
 # created by virtualenv automatically
 *.mp3
+.venv
+.idea
